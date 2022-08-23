@@ -57,6 +57,7 @@ void __fastcall ParseFromBuffer_Hooked(IZip* ecx, int edx, void* buffer, int buf
     for (const auto& [relative, path] : files)
     {
         printf("\t[?] File %s\n", relative);
+        
         if (!ecx->FileExistsInZip(relative))
         {
             printf("\t    %c%c Not found in archive\n", 192, 196);
